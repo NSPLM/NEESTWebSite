@@ -142,6 +142,7 @@
             transition: all 0.3s;
             border: none;
             cursor: pointer;
+            display: inline-block;
         }
 
         .cta-button:hover {
@@ -183,6 +184,17 @@
             font-weight: 600;
             line-height: 1.1;
             margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, var(--color-text) 0%, var(--color-primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero h2 {
+            font-size: clamp(1.5rem, 4.5vw, 4.5rem);
+            font-weight: 350;
+            line-height: 1.1;
+            margin-bottom: 1rem;
             letter-spacing: -0.02em;
             background: linear-gradient(135deg, var(--color-text) 0%, var(--color-primary) 100%);
             -webkit-background-clip: text;
@@ -259,12 +271,12 @@
 
         .section-header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
         }
 
         .section-header h2 {
             font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 1rem;
+            margin-bottom: 0.1rem;
             font-weight: 600;
             letter-spacing: -0.02em;
         }
@@ -272,7 +284,7 @@
         .section-header p {
             font-size: 1.2rem;
             color: var(--color-text-secondary);
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
@@ -498,6 +510,48 @@
         .feature-card:nth-child(4) { animation-delay: 0.4s; }
         .feature-card:nth-child(5) { animation-delay: 0.5s; }
         .feature-card:nth-child(6) { animation-delay: 0.6s; }
+
+        /* Additional Styles for About & Industries */
+        .industry-section {
+            background: var(--color-charcoal-700);
+            color: var(--color-white);
+            padding: 6rem 2rem;
+        }
+
+        .industry-section .section-header h2 {
+            color: var(--color-white);
+        }
+
+        .industry-section .section-header p {
+            color: var(--color-white-600);
+        }
+
+        .industry-card {
+            background: var(--color-charcoal-800);
+            border-color: rgba(255,255,255,0.1);
+        }
+
+        .industry-card h3 {
+            color: var(--color-white);
+        }
+
+        .about-section {
+            padding: 6rem 2rem;
+            background: var(--color-cream-50);
+        }
+
+        .about-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-text {
+            font-size: 1.2rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
     </style>
 </head>
 <body>
@@ -518,20 +572,22 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Main Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Maximize Machine Uptime with AI-Powered Intelligence</h1>
-            <p>Transform your manufacturing operations with real-time digital twins. Predict failures before they happen, optimize performance continuously, and achieve 99%+ uptime.</p>
+            <h1>Stop guessing why your CNC machine broke</h1>
+        </br>
+            <h2>Simply chat to diagnose failures.</h2>
+            <p>NEEST gives your factory equipment a voice. Your operators can chat directly with machines to instantly diagnose faults, predict failures, and eliminate hours of downtime.</p>
             <div class="hero-buttons">
-                <a href="#contact" class="cta-button">Schedule a Demo</a>
-                <a href="#how-it-works" class="secondary-button">Learn More</a>
+                <a href="#contact" class="cta-button">Book a 10-Minute Live Demo</a>
+                <a href="#how-it-works" class="secondary-button">Request a 14-Day Free Pilot</a>
             </div>
         </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="stats">
+    <!-- section class="stats">
         <div class="stats-container">
             <div class="stat-item">
                 <h3>35%</h3>
@@ -550,81 +606,190 @@
                 <p>Real-Time Monitoring</p>
             </div>
         </div>
+    </section -->
+       <!-- Problem Section -->
+    <section class="problem-section" id="problem">
+        <div class="section-header">
+            <h2>Dashboards don't fix machines.Answers do.</h2>
+            <p>When a machine goes down, you don't have time to stare at complex graphs or hunt through a 500-page manual for fault codes. You are losing €500 every minute. You need to know exactly what broke, right now.</p>
+        </div>
     </section>
 
     <!-- Features Section -->
     <section class="features" id="features">
         <div class="section-header">
-            <h2>Intelligent Solutions for Peak Performance</h2>
+            <!-- <h2>Intelligent Solutions for Peak Performance</h2> -->
+              <h2>Turn hours of troubleshooting into a 10-second text.</h2>
             <p>Our AI-powered platform transforms how you monitor, predict, and optimize your manufacturing operations</p>
         </div>
         <div class="features-grid">
             <div class="feature-card">
-                <div class="feature-icon">🎯</div>
+                <!-- <div class="feature-icon">💬</div> -->
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-square-icon lucide-messages-square"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></svg>
+                </div>
+                <h3>Instant Interrogation</h3>
+                <p>Machine stopped? Ask it why. Get the exact part name, error code, and required fix delivered in plain English.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-scatter-icon lucide-chart-scatter"><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="18.5" cy="5.5" r=".5" fill="currentColor"/><circle cx="11.5" cy="11.5" r=".5" fill="currentColor"/><circle cx="7.5" cy="16.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="14.5" r=".5" fill="currentColor"/><path d="M3 3v16a2 2 0 0 0 2 2h16"/></svg>
+                </div>
                 <h3>Predictive Maintenance</h3>
                 <p>AI algorithms analyze sensor data to predict equipment failures days or weeks in advance, eliminating unexpected downtime and costly emergency repairs.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">📊</div>
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-unplug-icon lucide-unplug"><path d="m19 5 3-3"/><path d="m2 22 3-3"/><path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z"/><path d="M7.5 13.5 10 11"/><path d="M10.5 16.5 13 14"/><path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z"/></svg>
+                </div>
+                <h3>Plug-and-Play Setup</h3>
+                <p>No massive IT overhaul. Connect seamlessly existing CNC controller, and it becomes self-aware in under 2 hours.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flip-horizontal2-icon lucide-flip-horizontal-2"><path d="m3 7 5 5-5 5V7"/><path d="m21 7-5 5 5 5V7"/><path d="M12 20v2"/><path d="M12 14v2"/><path d="M12 8v2"/><path d="M12 2v2"/></svg>
+                </div>
                 <h3>Real-Time Digital Twins</h3>
                 <p>Create virtual replicas of your machines that mirror real-time performance. Simulate scenarios, test optimizations, and make data-driven decisions instantly.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">⚡</div>
-                <h3>Energy Optimization</h3>
-                <p>Monitor power consumption patterns and automatically optimize energy usage across all equipment, reducing operational costs by up to 30%.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔔</div>
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-siren-icon lucide-siren"><path d="M7 18v-6a5 5 0 1 1 10 0v6"/><path d="M5 21a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-1a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2z"/><path d="M21 12h1"/><path d="M18.5 4.5 18 5"/><path d="M2 12h1"/><path d="M12 2v1"/><path d="m4.929 4.929.707.707"/><path d="M12 12v6"/></svg>
+                </div>
                 <h3>Intelligent Alerts</h3>
                 <p>Receive instant notifications when anomalies are detected. Our AI learns your operations and only alerts you when intervention is truly needed.</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">📈</div>
+                <div class="feature-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-combined-icon lucide-chart-no-axes-combined"><path d="M12 16v5"/><path d="M16 14.639V21"/><path d="M20 10.656V21"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18.463V21"/><path d="M8 14.656V21"/></svg>
+                </div>
                 <h3>Performance Analytics</h3>
                 <p>Comprehensive dashboards showing OEE, cycle times, quality metrics, and production trends. Turn data into actionable insights.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">🔗</div>
-                <h3>Universal Integration</h3>
-                <p>Connect seamlessly with any equipment using MQTT, Modbus, OPC-UA, and other industrial protocols. No expensive hardware overhaul required.</p>
-            </div>
+            
         </div>
     </section>
 
+    <!-- Security Section -->
+    <section class="features" id="security" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(147, 197, 253, 0.06)); border-top: 1px solid rgba(22, 122, 255, 0.12);">
+        <div class="section-header">
+            <h2>Your data stays yours. Your machines stay locked down.</h2>
+            <p>We built Neest so you don't have to fight your IT department. We use zero-trust edge architecture and localized AI to ensure your proprietary manufacturing data never touches public models.</p>
+        </div>
+        <div class="features-grid" style="max-width: 1000px; margin: 0 auto; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+            
+            <div class="feature-card" style="background: var(--color-surface);">
+                <div class="feature-icon" style="background: rgba(230, 129, 97, 0.15); color: var(--color-accent);">🔒</div>
+                <h3>100% Private, Self-Hosted LLMs</h3>
+                <p>Your machine error logs, production speeds, and shift notes <strong>never go to OpenAI or public clouds.</strong> Our language models are hosted on secure, self-hosted servers. Your trade secrets remain completely localized and private.</p>
+            </div>
+
+            <div class="feature-card" style="background: var(--color-surface);">
+                <div class="feature-icon" style="background: rgba(230, 129, 97, 0.15); color: var(--color-accent);">🛡️</div>
+                <h3>Zero-Trust Edge Connectivity</h3>
+                <p>We don't open inbound firewall ports to your factory floor. Our edge devices push telemetry outbound only, utilizing industry-standard MQTT over TLS 1.3 encryption. Your machines are physically isolated and cannot be compromised from the outside.</p>
+            </div>
+
+        </div>
+    </section>
     <!-- How It Works -->
     <section class="how-it-works" id="how-it-works">
         <div class="section-header">
-            <h2>Get Started in Three Simple Steps</h2>
+            <h2>Up and running before your next shift</h2>
             <p>From installation to optimization in less than a week</p>
         </div>
         <div class="steps-container">
             <div class="step">
                 <div class="step-number">1</div>
-                <h3>Connect Your Machines</h3>
-                <p>Our IoT sensors integrate with your existing equipment using standard industrial protocols. Installation takes hours, not weeks.</p>
+                <h3>Connect</h3>
+                <p>We plug our edge node into your machine's PLC/Controller. Installation takes hours, not weeks.</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
-                <h3>AI Learns Your Operations</h3>
+                <h3>Learn</h3>
                 <p>Machine learning algorithms analyze your unique production patterns, identifying normal behavior and potential optimization opportunities.</p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
-                <h3>Optimize & Scale</h3>
-                <p>Receive actionable insights and predictions. Make informed decisions that continuously improve uptime, efficiency, and profitability.</p>
+                <h3>Communicate</h3>
+                <p>Receive actionable insights and predictions. Your operators start texting the machine via our secure app.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Industries: CNC Machines Section (Dark Mode for contrast) -->
+    <section class="industry-section" id="cnc-machines">
+        <div class="section-header">
+            <h2>Built specifically for the chaos of CNC.</h2>
+            <p>Generic IoT platforms don't understand the difference between tool chatter and a normal roughing pass. We do. Neest is trained on the exact failure modes of high-precision CNC machining.</p>
+        </div>
+        <div class="features-grid" style="max-width: 1400px; margin: 0 auto;">
+            <div class="feature-card industry-card">
+                <div class="feature-icon">⚙️</div>
+                <h3>Spindle Bearing Protection</h3>
+                <p>Spindle crashes cost upwards of $10,000. Neest detects micro-vibrations and heat anomalies, texting your operator to pause the job hours before the bearing seizes.</p>
+            </div>
+            <div class="feature-card industry-card">
+                <div class="feature-icon">🌡️</div>
+                <h3>Coolant & Temp Alerts</h3>
+                <p>If coolant flow drops or enclosure temperatures spike, the machine instantly messages your maintenance team to prevent thermal expansion from ruining your tolerances.</p>
+            </div>
+            <div class="feature-card industry-card">
+                <div class="feature-icon">📊</div>
+                <h3>G-Code & Controller Sync</h3>
+                <p>We pull data straight from Haas, Fanuc, and Siemens controllers. When an alarm code triggers, we translate it into plain English and text you the exact fix.</p>
+            </div>
+        </div>
+    </section>
+    <section class="industry-section" id="blow-molding" style="background: var(--color-slate-900); border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="section-header">
+            <h2>Stop scrap before the mold opens.</h2>
+            <p>In blow molding, a 5-degree temperature shift means thousands of defective parts. Neest monitors your extruders, chillers, and hydraulics to catch process drift before it hits your scrap rate.</p>
+        </div>
+        <div class="features-grid" style="max-width: 1400px; margin: 0 auto;">
+            <div class="feature-card industry-card" style="background: rgba(255,255,255,0.03);">
+                <div class="feature-icon">🔥</div>
+                <h3>Extruder Temp Anomalies</h3>
+                <p>Resin too hot? Parison drooping? The machine will text your operator instantly if barrel heater bands start failing, saving you from a massive material purge.</p>
+            </div>
+            <div class="feature-card industry-card" style="background: rgba(255,255,255,0.03);">
+                <div class="feature-icon">❄️</div>
+                <h3>Chiller & Cycle Time Alerts</h3>
+                <p>Mold cooling is where you make money. If chiller flow drops and your cycle times start creeping up, Neest alerts maintenance to check the lines before production drops.</p>
+            </div>
+            <div class="feature-card industry-card" style="background: rgba(255,255,255,0.03);">
+                <div class="feature-icon">💧</div>
+                <h3>Hydraulic Pressure Drops</h3>
+                <p>A slight drop in clamp pressure can cause blown-out seams. We track the hydraulic lines and translate pressure faults into a simple text: "Clamp pressure low, check pump #2."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="section-header">
+                <h2>We got tired of software companies guessing how hardware works.</h2>
+            </div>
+            <p class="about-text">
+                Most industrial IoT is built by software developers who have never touched a greasy machine, traced a faulty PLC wire, or stood on a loud factory floor at 2:00 AM trying to save a production run. 
+            </p>
+            <p class="about-text">
+                <strong>We are different.</strong> Our team is anchored by over 40 years of hard-won experience in Machine Automation and industrial IoT, backed by mechanical engineers and elite AI/ML experts. We know exactly how heavy machinery fails in the real world, and we know exactly how to make modern AI understand it.
+            </p>
+            <p class="about-text" style="font-weight: 600; color: var(--color-primary); margin-top: 2rem; font-size: 1.4rem;">
+                We don't build dashboards. We build machines that talk.
+            </p>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
         <div class="cta-content">
-            <h2>Ready to Transform Your Manufacturing?</h2>
-            <p>Join leading manufacturers who have achieved breakthrough results in machine uptime and operational efficiency.</p>
+            <h2>Put us on your most troublesome machine</h2>
+            <p>We are taking 3 factories this month for a zero-risk, 14-day pilot. If we don't cut your diagnostic downtime in half, we pack up our hardware and leave.</p>
             <div class="hero-buttons">
-                 <a class="cta-button" href="https://calendly.com/neestiot/30min" target="_blank">Schedule Your Free Demo</a>
-                <a href="mailto:contact@neestiot.com" class="secondary-button">Contact Sales</a>
+                 <a class="cta-button" href="https://calendly.com/neestiot/30min" target="_blank">Claim Your Pilot Spot Now</a>
             </div>
         </div>
     </section>
@@ -641,31 +806,26 @@
                 <ul>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#security">Security</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Industries</h4>
                 <ul>
-                    <li><a href="#">Blow Molding</a></li>
-                    <li><a href="#">Injection Molding</a></li>
-                    <li><a href="#">CNC Machining</a></li>
-                    <li><a href="#">Extrusion</a></li>
+                    <li><a href="#cnc-machines">CNC Machining</a></li>
+                    <li><a href="#cnc-machines">Blow Molding</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
+                    <li><a href="#about">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 NEEST IOT Systems. All rights reserved. | Empowering Industry 5.0</p>
+            <p>&copy; 2026 NEEST IOT Systems. All rights reserved. | Empowering Industry 4.0</p>
         </div>
     </footer>
 
